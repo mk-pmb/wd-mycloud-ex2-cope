@@ -1,0 +1,28 @@
+{ "name": "wd-mycloud-ex2-cope",
+  "version": "0.0.1",
+  "description": "POV: You somehow ended up with a (used) \"WD MyCloud EX2\" NAS and since it was free, you want to somehow make use of it despite its user-hostile operating system.",
+  "keywords": [],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/wd-mycloud-ex2-cope/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/wd-mycloud-ex2-cope.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/wd-mycloud-ex2-cope/issues"
+  },
+  "contributors": [],
+
+  "private": true, "license": "ISC",
+
+  "scripts": { "test": "exit 1" },
+  "directories": { "test": "test" },
+
+  "dependencies": {},
+  "devDependencies": {
+  },
+
+
+  "engines": { "busybox": ">=1.36.1" }
+}
