@@ -18,6 +18,10 @@ but someone would have to create the latter after each reboot.
 Fortunately, a simple entware init script can do that!
 Use these commands to create it:
 
+* You don't need this if you install [the goodies](../../goodies/)
+  because they already do the same thing.
+
+
 ```sh
 D=/opt/etc/init.d/S10gnu_screen_tmp
 printf '%s\n' '#!/bin/sh' 'mkdir -p /tmp/screens' \

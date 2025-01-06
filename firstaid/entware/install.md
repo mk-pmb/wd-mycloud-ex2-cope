@@ -56,18 +56,15 @@ Entware uses `opkg` as its package manager. &rArr; In an SSH session, run:<br>
 `opkg install coreutils curl file findutils git git-http grep htop`
 `less nano ntpdate procps-ng screen sed wget-nossl`
 
-* You should [optimize the `screen` command](gnu_screen.md) before you use it.
-
-
-
-### Install more conveniences
-
+* ⚠ Don't use the `screen` command yet!<br>
+  Either [optimize it manually](gnu_screen.md)
+  or install [the goodies](../../goodies/) to have them do it.
 * The opkg packages from above should be enough to get your shell to a state
   where you can clone
   [terminal-util-pmb](https://github.com/mk-pmb/terminal-util-pmb) and
   [git-util-pmb](https://github.com/mk-pmb/git-util-pmb).
   * To install their binlinks[sic], you'll need npm,
-    so consider [installing node.js](../nodejs/README.md), too.
+    so consider [installing node.js](../../goodies/nodejs/), too.
 * Unfortunately, the
   [docker-devel-util-pmb](https://github.com/mk-pmb/docker-devel-util-pmb)
   install script isn't compatible with busybox yet.
