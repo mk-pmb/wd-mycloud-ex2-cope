@@ -58,8 +58,24 @@ Known issues
 * If you change the LAN settings and suddenly the web interface seems to no
   longer be reachable, it probably just redirected you improperly.
   Keep cool and just surf to the known-good URL of the web interface.
+* If your RAID locks up really bad due to the kernel panics described in the
+  data loss warning chapter above, you may discover that the `reboot` command
+  has no effect other than spawning yet another defunct `sync` process,
+  and that even the `-f` parameter for busybox's `reboot` has no effect in
+  that situation. Usually that would be a [REISUB][wp-reisub] situation,
+  but you're on SSH, so there's no need for switching the virtual console to
+  raw mode (R). You also wouldn't want to send `SIGTERM` (E) and `SIGKILL` (I)
+  as those would terminate your SSH session.
+  The kernel is already trying to sync (S), another attempt won't help.
+  Remounting all filesystems read-only (U) may be worth a try, so
+  `echo u >/proc/sysrq-trigger` before you can finally actually reboot (B):
+  `echo b >/proc/sysrq-trigger`
 
 
+
+
+
+  [wp-reisub]: https://en.wikipedia.org/wiki/REISUB
 
 
 &nbsp;
