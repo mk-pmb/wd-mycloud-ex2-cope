@@ -35,13 +35,18 @@ ln -ns -- "${APPDIR}"/etc/* /etc/docker/
 (Yes, the curly braces are useless.
 I just use them to match the style of the original file.)
 
+Then:
 
-Make sure `$DKAPP/etc/daemon.json` is valid JSON (e.g. `{}`),
-create a dummy file (e.g. an empty `dummy.txt`) to test whether the
-`ln` command in the above patch works for multiple files, reboot,
-and check if all symlink were installed correctly into `/etc/docker`.
-They should, and if so, you can delete the dummy file.
-(And optionally the symlink to it. Or just wait for the next reboot.)
+1.  `cd -- $DKAPP/etc`
+1.  Make sure `daemon.json` is valid JSON (e.g. `{}`).
+1.  Create a dummy file (e.g. an empty `dummy.txt`) to test whether the
+    `ln` command in the above patch works for multiple files.
+1.  In the web admin GUI, stop the docker "app".
+1.  In the web admin GUI, start the docker "app".
+1.  Back in SSH, check if all symlink were installed correctly into
+    `/etc/docker`. (They should.)
+1.  You can now delete the dummy file.
+    (And optionally the symlink to it. Or just wait for the next reboot.)
 
 
 
