@@ -20,7 +20,9 @@ Use these commands to create it:
 
 * You don't need this if you install [the goodies](../../goodies/)
   because they already do the same thing.
-
+* ⚠ This script ignores the event type and thus will run on way too many
+  occasions, including `clean` and `stop`. However, the simplicity of its
+  actions allows us to run it indiscriminately without damage.
 
 ```sh
 D=/opt/etc/init.d/S10gnu_screen_tmp
