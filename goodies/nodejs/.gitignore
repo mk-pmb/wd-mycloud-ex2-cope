@@ -1,0 +1,19 @@
+
+# Site-specific files:
+/@*
+/*.@*
+/*.tar.xz
+/active
+/latest
+
+
+
+# Auto-generated files:
+/*.files.txt
+/node_nodules
+/v[0-9]*
+/tmp.*
+
+
+
+# Unsorted stuff (this section should be empty):
