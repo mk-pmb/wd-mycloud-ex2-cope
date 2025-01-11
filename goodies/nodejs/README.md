@@ -6,6 +6,9 @@ Node.js
 Why we install into `/opt/lib` rather than `/opt/usr/lib`
 ---------------------------------------------------------
 
+* Please check the progress on [the related feature request
+  ](https://github.com/WDCommunity/wdpksrc/issues/125) and it it's still
+  open, consider whether you may be able to help.
 * Node.js expects a congruent directory structure with the same prefix
   for `$PREFIX/bin` and `$PREFIX/lib/node_modules`.
 * For example, the `npm` entry points to `../lib/node_modules/npm/…`.
