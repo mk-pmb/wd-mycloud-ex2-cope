@@ -1,4 +1,9 @@
 
+# Site-specific files:
+/@*
+/*.@*
+
+
 # Auto-generated files:
 /tmp.*
 
