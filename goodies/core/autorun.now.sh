@@ -1,14 +1,11 @@
-#!/bin/bash
+#!/opt/bin/ex2cope-goodie
 # -*- coding: utf-8, tab-width: 2 -*-
 
 
 function goodies_autorun_now () {
-  export LANG{,UAGE}=en_US.UTF-8  # make error messages search engine-friendly
-  local SELF_ABS="$(readlink -f -- "$BASH_SOURCE")" # busybox
-  local SELF_DIR="${SELF_ABS%/*}"
-  local COPE_DIR="${SELF_DIR%/*/*}"
-  cd -- "$COPE_DIR" || return $?
   exec </dev/null
+  cd -- "$COPE_DIR" || return $?
+
   local VAL='/etc/profile'
   [ ! -f "$VAL" ] || source -- "$VAL"
 

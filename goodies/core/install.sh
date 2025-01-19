@@ -8,8 +8,12 @@ function install_goodies () {
   local SELF_DIR="${SELF_ABS%/*}"
   local COPE_DIR="${SELF_DIR%/*/*}"
   cd -- "$COPE_DIR" || return $?
+
+  ln -sfvT "$SELF_DIR"/ex2cope-goodie.sh \
+    /opt/bin/ex2cope-goodie || return $?
   ln -sfvT "$SELF_DIR"/autorun.trampoline.sh \
     /opt/etc/init.d/S50cope_goodies_autorun || return $?
+
   echo +OK 'Installed. Effects will apply when you next reboot your NAS.'
 }
 

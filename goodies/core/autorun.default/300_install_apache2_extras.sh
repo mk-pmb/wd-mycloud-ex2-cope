@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/opt/bin/ex2cope-goodie
 # -*- coding: utf-8, tab-width: 2 -*-
 
 function install_apache2_extras () {
