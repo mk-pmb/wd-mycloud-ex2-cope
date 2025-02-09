@@ -9,5 +9,4 @@ To install them:
 * Clone this repo:
   `git clone https://github.com/mk-pmb/wd-mycloud-ex2-cope ex2cope`
 * Run the core installer: `./ex2cope/goodies/core/install.sh`
-* (optional) [Install node.js](nodejs/)
 * Reboot.

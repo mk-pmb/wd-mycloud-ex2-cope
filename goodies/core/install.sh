@@ -9,6 +9,13 @@ function install_goodies () {
   local COPE_DIR="${SELF_DIR%/*/*}"
   cd -- "$COPE_DIR" || return $?
 
+  ./goodies/nodejs/autosetup.sh || return $?$(
+    echo E: 'Failed to install node.js!' >&2)
+
+  grep --help | grep -qFe --perl-regexp || return 4$(
+    echo E: >&2 "Your default grep ($(which grep
+      )) doesn't understand the `--perl-regexp` option. Please upgrade it.")
+
   ln -sfvT "$SELF_DIR"/ex2cope-goodie.sh \
     /opt/bin/ex2cope-goodie || return $?
   ln -sfvT "$SELF_DIR"/autorun.trampoline.sh \
@@ -16,6 +23,25 @@ function install_goodies () {
 
   echo +OK 'Installed. Effects will apply when you next reboot your NAS.'
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
