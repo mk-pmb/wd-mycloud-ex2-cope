@@ -21,8 +21,22 @@ function install_goodies () {
   ln -sfvT "$SELF_DIR"/autorun.trampoline.sh \
     /opt/etc/init.d/S50cope_goodies_autorun || return $?
 
+  setup_etc_profile_d_support || return $?
   echo +OK 'Installed. Effects will apply when you next reboot your NAS.'
 }
+
+
+function setup_etc_profile_d_support () {
+  local OEP='/opt/etc/profile'
+  grep -Fe profile "$OEP" | grep -qFe .d ||
+    echo $'\n'". '$SELF_DIR'/profile.d/source-all.inc.sh" \
+    >>"$OEP" || return $?
+  mkdir -p "$OEP".d
+  for ARG in early inc late; do
+    ln -sfT -- "$SELF_DIR"/profile.d/"$ARG" "$OEP".d/ex2cope."$ARG"
+  done
+}
+
 
 
 
