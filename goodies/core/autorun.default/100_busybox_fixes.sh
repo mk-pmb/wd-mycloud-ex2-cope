@@ -1,4 +1,7 @@
 #!/bin/bash
+
+addgroup -S -g 65534 nogroup 2>/dev/null
+
 BADS=(
 
   sed     # b/c WD's sed doesn't understand \f.
